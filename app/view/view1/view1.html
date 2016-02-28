@@ -1,0 +1,38 @@
+<p>{{setting}}</p>
+<p>This is the partial for view 1.</p>
+Your name: <input type="text" ng-model="yourname" placeholder="World">
+<hr>
+Hello {{yourname || 'World'}}!
+<p>1+2={{1+2}}</p>
+<ul>
+    <li ng-repeat="phone in phones">
+        {{phone.name}}
+        <p>{{phone.snippet}}</p>
+    </li>
+</ul>
+<p>Total number of phones: {{phones.length}}</p>
+<table>
+    <tr><th>row number</th></tr>
+    <tr ng-repeat="i in [0, 1, 2, 3, 4, 5, 6, 7]"><td>{{i+1}}</td></tr>
+    <tr ng-repeat="i in ['11','22','33']"><td>{{i}}</td></tr>
+</table>
+
+Search: <input ng-model="query">
+Sort by:
+<select ng-model="orderProp">
+    <option value="name">Alphabetical</option>
+    <option value="age">Newest</option>
+</select>
+
+
+<ul class="phones" draggable>
+    <li ng-repeat="phone in phones | filter:query | orderBy:orderProp">
+        {{phone.name}}
+        <p>{{phone.snippet}}</p>
+        <a href="#/view1/{{phone.age}}">{{phone.age}}</a>
+        <p>{{phone.sex | checkmark2}}</p>
+    </li>
+</ul>
+
+<span draggable>Drag ME</span>
+Quantity: <input type="integer" min="0" ng-model="qty" required >

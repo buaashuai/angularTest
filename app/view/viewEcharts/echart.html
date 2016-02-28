@@ -1,0 +1,68 @@
+<div>{{str}}</div>
+
+<button ng-click="changData()">click me</button>
+<div e-chart ui-options="{
+            tooltip: {
+                show: true}, legend: {
+                data: {{tip}}
+            },
+            toolbox: {
+                show : true,
+                feature : {
+                    mark : {show: true},
+                    dataView : {show: true, readOnly: false},
+                    magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+                    restore : {show: true},
+                    saveAsImage : {show: true}
+                }
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    data: {{dataX}}
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value'
+                }
+            ],
+            series: [
+                {
+                    'name': '浏览量',
+                    'type':'line',
+                    'stack': '总量',
+                    'data': {{data1}}
+                },
+                {
+                    'name':'访客',
+                    'type':'line',
+                    'stack': '总量',
+                    'data': {{data2}}
+                },
+                {
+                    'name': '线索',
+                    'type':'line',
+                    'stack': '总量',
+                    'data': {{data3}}
+                },
+                {
+                    'name':'案源',
+                    'type':'line',
+                    'stack': '总量',
+                    'data': {{data4}}
+                },
+                {
+                    'name': '订单',
+                    'type':'line',
+                    'stack': '总量',
+                    'data': {{data5}}
+                },
+                {
+                    'name':'成交',
+                    'type':'line',
+                    'stack': '总量',
+                    'data': {{data6}}
+                }
+            ]
+        }" style="height: 400px;width: 100%;"></div>

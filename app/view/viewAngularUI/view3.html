@@ -1,0 +1,32 @@
+<script type="text/ng-template" id="alert.html">
+    <div class="alert" style="background-color:#fa39c3;color:white" role="alert">
+        <div ng-transclude></div>
+    </div>
+</script>
+
+<my-alert dismiss-on-timeout="2000"  ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</my-alert>
+<my-alert template-url="alert.html">A happy alert!</my-alert>
+<button type="button" class='btn btn-default' ng-click="addAlert()">Add Alert</button>
+
+<h4>Triggers</h4>
+<p>
+    <button uib-popover="I appeared on mouse enter!" popover-trigger="mouseenter" type="button" class="btn btn-default">Mouseenter</button>
+</p>
+
+<my-alert dismiss-on-timeout="2000"  ng-repeat="alert in alerts" type="{{alert.type}}"  close="closeAlert($index)">{{alert.msg}}</my-alert>
+
+<div class="shareButtonListControl" parentareaid="follow-npp-list-area" style="width: 30px;height: 20px;position: absolute;background: #fff;top: 400px; left: 50px;">
+    <a ng-click="showShareButtonList(this)" style="width: 40px;height: 30px;">
+        <span class="glyphicon glyphicon-chevron-down" aria-hidden="true" style="color: rgba(128, 128, 128, 0.79);"></span></a>
+</div>
+<div class="shareButtonList" ng-show="showC">
+    <ul>
+        <li class="row-text"><a class="collect" href="javascript:;">ÊÕ²Ø</a></li>
+        <li class="row-text"><a href="javascript:;" class="report">¾Ù±¨</a></li>
+    </ul>
+</div>
+
+<input type="text" ng-model="myText" />
+<button ui-zeroclip zeroclip-copied="copied=true"
+        zeroclip-text="{{ copyMessage }}">Copy</button>
+<span ng-show="copied">"This was your text: {{ copyMessage }}" was copied!</span>

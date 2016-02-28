@@ -1,0 +1,27 @@
+<p>This is the partial for view 2.</p>
+<p>
+  Showing of 'interpolate' filter:
+  {{ 'Current version is v%VERSION%.' | interpolate }}
+</p>
+<p>{{id}}</p>
+
+{{ "lower cap string" | uppercase }}
+{{ {foo: "bar", baz: 23} | json }}
+{{ 1304375948024 | date }}
+{{ 1304375948024 | date:"MM/dd/yyyy @ h:mma" }}
+
+Root scope <tt>MyEvent</tt> count: {{count}}
+<ul>
+  <li ng-repeat="i in [1]" ng-controller="View2Ctrl">
+    <button ng-click="$emit('MyEvent')">$emit('MyEvent')</button>
+    <button ng-click="$broadcast('MyEvent')">$broadcast('MyEvent')</button>
+    <br>
+    Middle scope <tt>MyEvent</tt> count: {{count}}
+    <ul>
+      <li ng-repeat="item in [1, 2]" ng-controller="View2Ctrl">
+        Leaf scope <tt>MyEvent</tt> count: {{count}}
+      </li>
+    </ul>
+    cout<<endl;
+  </li>
+</ul>
