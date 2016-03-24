@@ -1,9 +1,12 @@
 <div>{{str}}</div>
 
 <button ng-click="changData()">click me df</button>
+<span class="icon-headphones">你好</span>
 <div e-chart ui-options="{
             tooltip: {
-                show: true}, legend: {
+                show: true,
+                trigger: 'axis'
+            }, legend: {
                 data: {{tip}}
             },
             toolbox: {

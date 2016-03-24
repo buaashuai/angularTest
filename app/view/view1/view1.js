@@ -34,4 +34,28 @@ function View1Ctrl($scope,$http,Phone,SearchSettingService) {
 
     $scope.parms.putsh_startTime="2015-01-01";
 
+    var req = new XMLHttpRequest();
+    var run = function(){
+
+        req.timeout = 5000;
+        req.onreadystatechange=state_Change;
+        req.open('GET', 'http://localhost:8000/app/assets/img/tiny-image.gif', true);
+        req.send();
+    };
+
+    function state_Change()
+    {
+        if (req.readyState==4)
+        {// 4 = "loaded"
+            if (req.status==200)
+            {// 200 = OK
+                console.log("inline");
+            }
+            else
+            {
+                console.log("offline¡£¡£");
+            }
+        }
+    }
+    setInterval(run, 3000);
 }

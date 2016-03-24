@@ -3,8 +3,11 @@
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
   'ngRoute',
+    'ngAnimate',
   'ui.bootstrap',
   'myApp.view1',
+   'myApp.controller',
+    'ngDragDrop',
   'myApp.view2',
     'myApp.view3',
   'myApp.form2',
@@ -36,6 +39,18 @@ angular.module('myApp', [
       }).when('/echart', {
           templateUrl: 'view/viewEcharts/echart.html',
           controller: 'echartCtrl'
+      }).when('/mydrag', {
+          templateUrl: 'view/angularDragdrop.html',
+          controller: 'myDrag'
+      }).when('/drag2', {
+          templateUrl: 'view/drag2.html',
+          controller: 'drag2'
+      }).when('/drag3', {
+          templateUrl: 'view/drag3.html',
+          controller: 'drag3'
+      }).when('/drag4', {
+          templateUrl: 'view/drag4.html',
+          controller: 'drag4'
       })
       .otherwise({redirectTo: '/view1'});
         // config ZeroClipboard
