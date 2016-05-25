@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <title>百度律师</title>
+    {%include file="./layout/header.tpl"%}
+    <style>
+        a, a:hover, a:visited {
+            text-decoration: none;
+            display: block;
+        }
+
+    </style>
+	<link rel="stylesheet" href="law.fix.css">
+</head>
+<body>
+<div id="wa-generalevent-wx-logo" style="display:none; margin:0;"><img src="http://lvshi.baidu.com/static/images/logo.png"></div>
+<header data-blend-widget="header" class="blend-header">
+    <span class="blend-header-left"></span>
+        <span class="blend-header-title">
+            <a href="#" class="blend-header-item">百度律师</a>
+        </span>
+        <span class="blend-header-right">
+        </span>
+</header>
+<div class="blend-slider blend-slider-small" data-blend-slider="">
+    <a class="law-profile-btn" href="/user/center" onclick="_hmt.push(['_trackEvent', '个人中心', 'click'])"><i class="law-icon law-icon-user"></i>个人中心</a>
+    <ul class="blend-slides" onclick="_hmt.push(['_trackEvent', '轮播图', 'click'])">
+        {%foreach $banner_list as $item%}
+        <li data-href="{%$item['click_url']%}">
+            <img src="{%$item['pic_url']%}">
+        </li>
+        {%/foreach%}
+    </ul>
+</div>
+<div class="index-content">
+    <div class="law-flex-row law-nav-button">
+        <a class="law-index-item law-btn-call" onclick="_hmt.push(['_trackEvent', '免费电话咨询', 'click']);" href="tel:400-6900-302">
+            <div class="law-img">
+                <img src="/static/images/icon-newcal.png" class="img-bg">
+            </div>
+            <span class="law-card-span">免费咨询</span>
+            <span class="law-index-text call-text">专业的免费咨询分析,案件预判等<span>
+        </a>
+        <a class="law-index-item law-btn-appointment" onclick="_hmt.push(['_trackEvent', '预约律师回电', 'click']);" href="/user/submitcase">
+                <div class="law-img">
+                    <img src="/static/images/icon-notenew.png" class="img-bg">
+                </div>
+                <span class="law-card-span">帮我找律师</span>
+                <span class="law-index-text submit-text">只需提交案情,百度律师为您匹配最适合的律师<span>
+         </a>
+    </div>
+
+    <div class="mt10">
+        <span class="law-ads">
+            四大优势帮助你解决法律问题
+        </span>
+        <div class="law-ad-content">
+            <div class="law-ad-item">
+                <div>
+                     <i class="icon-circle icon-ad-power"></i>
+                </div>
+                <span class="law-ad-title">权威</span>
+                <span class="ad-word">百度权威</span>
+                <span>认证律师</span>
+            </div>
+            <div class="law-ad-item">
+               <div>
+                    <i class="icon-circle icon-ad-free"></i>
+               </div>
+               <span class="law-ad-title">免费</span>
+               <span class="ad-word">电话咨询</span>
+               <span>免费便捷</span>
+            </div>
+            <div class="law-ad-item">
+             <div>
+                  <i class="icon-circle icon-ad-count"></i>
+             </div>
+             <span class="law-ad-title">优惠</span>
+             <span class="ad-word">支付最高</span>
+             <span>减5000</span>
+            </div>
+            <div class="law-ad-item">
+             <div>
+                  <i class="icon-circle icon-ad-fast"></i>
+             </div>
+             <span class="law-ad-title">速度</span>
+             <span class="ad-word">最快30分钟</span>
+             <span>响应</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt10">
+        <span class="law-ads">
+            提交案情
+        </span>
+        <div class="law-card-group">
+                <form name="case" method="post" id="case">
+                <div class="law-card">
+                    <div class="law-card-label law-card-label-align">
+                        <label>您的称呼:</label>
+                    </div>
+                    <div class="law-card-content">
+                        <div class="law-card-title">
+                            <input maxlength="18" type="text" name="name" class="law-form-input" placeholder="请填写您的称呼"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="law-card">
+                    <div class="law-card-label law-card-label-align">
+                        <label>联系方式:</label>
+                    </div>
+                    <div class="law-card-content">
+                        <div class="law-card-text">
+                            <input type="tel" name="phone"  class="law-form-input" placeholder="可接收服务状态信息"/>
+                        </div>
+                    </div>
+                    </div>
+                <div class="law-card law-card-arrow" id="area">
+                    <div class="law-card-label">
+                        <span>涉案地区:</span>
+                    </div>
+                    <div class="law-card-content">
+                        <div class="law-card-title">
+                            <span class="law-subtitle" id="area_text">请选择所在城市</span>
+                            <input type="hidden" readonly name="area">
+                        </div>
+                    </div>
+                </div>
+                <div class="law-card">
+                    <div class="law-card-label law-card-label-align">
+                        <span>案情描述:</span>
+                    </div>
+                    <div class="law-card-content">
+                        <textarea maxlength="200" name="description" style="height:45px;" class="law-form-input" placeholder="请在这里简单描述您要解决的问题以及对律师的要求，我们会根据您的需求做适合的安排。"></textarea>
+                    </div>
+                </div>
+                </form>
+            </div>
+    </div>
+
+</div>
+
+<div class="law-flex-row">
+        <div class="law-card-item" onclick="_hmt.push(['_trackEvent', '案源提交', 'click'])">
+            <span class="law-btn index-button" id="submitCase">提交</span>
+        </div>
+    </div>
+    <div>
+        <div  id="domDialog" class="blend-dialog" style="display: block">
+            <div class="blend-dialog-header">
+                提示
+            </div>
+            <div class="blend-dialog-body">
+                请填写正确的手机号
+            </div>
+            <div class="blend-dialog-footer">
+                <a href="javascript:void(0);" class="blend-dialog-confirm">确认</a>
+            </div>
+        </div>
+        <div  id="success" class="blend-dialog" style="display: block">
+            <div class="blend-dialog-body">
+                提交成功，会有1-3位律师供你选择，他们会电话联系您
+            </div>
+            <div class="blend-dialog-footer">
+                <a href="javascript:void(0);" class="blend-dialog-confirm">确认</a>
+            </div>
+        </div>
+        <div  id="error" class="blend-dialog" style="display: block">
+            <div class="blend-dialog-body">
+                提交失败，请您稍后再试
+            </div>
+            <div class="blend-dialog-footer">
+                <a href="javascript:void(0);" class="blend-dialog-confirm">确认</a>
+            </div>
+        </div>
+    </div>
+ <div class="blend-suspend-mask"></div>
+    <div data-blend-widget="suspend" class="blend-suspend" id="position">
+            <div class="law-card" style="margin-bottom: 0">
+                <div class="law-suspend-title" style="font-size:16px;">
+                    <strong>选择城市</strong>
+                </div>
+                <div class="blend-suspend-close">
+                    <span></span>
+                </div>
+            </div>
+            <div class="blend-suspend-content">
+                <section class="blend-tab">
+                    <div class="blend-tab-header">
+                        <div class="blend-tab-header-item">省份</div>
+                        <div class="blend-tab-header-item">城市</div>
+                    </div>
+                    <div class="blend-tab-body" style="height:220px;overflow:scroll;min-height:220px;background-color:#fff">
+                        <div class="blend-tab-content-item">
+                            <div class="law-card-group" id="province">
+                                <div class="law-card">
+                                    <span>暂无数据~</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blend-tab-content-item">
+                            <div class="law-card-group" id="city">
+                                <div class="law-card">
+                                    <span>请选择省份~</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+
+{%include file="./layout/footer.tpl"%}
+<script name="baidu-tc-cerfication" data-appid="7688845" src="https://openapi.baidu.com/cloudaapi/lightapp.js"></script>
+<script type="text/javascript">
+    clouda.lightInit({
+        ak: 'ZLP36HqFXAg3r11vaGCpXYf8',
+        module:["smartBar"]
+    },function(){
+        clouda.lego.smartBar.show();
+    });
+    $('.blend-slider').slider();
+</script>
+<script>
+    $(function() {
+        var success = false;
+        $('#submitCase').bind('tap', function (event) {
+            $(this).addClass('disabled');
+            if (!success) {
+                var name = $('[name="name"]').val();
+                var phone = $.trim($('[name="phone"]').val());
+                var description = $('[name="description"]').val();
+                var area = $('[name="area"]').val();
+                if (!phone || phone.length < 11) {
+                    $('#domDialog').dialog({
+                        maskTapClose: true
+                    }).dialog("show");
+                    $('[name="phone"]').addClass('law-phone-error');
+                }
+                else {
+                    $('[name="phone"]').removeClass('law-phone-error');
+                    var url = '/law/api/submitcase';
+                    $.post(url, {
+                        name: name,
+                        phone: phone,
+                        area: area,
+                        description: description
+                    }, function (data) {
+                        if (data.errno) {
+                            $('#error').dialog().dialog("show");
+                        }
+                        else {
+                            $('#success').dialog().dialog("show");
+                        }
+                    });
+                }
+            }
+        });
+
+        $('#success').on('dialog:confirm', function () {
+            location.href = '/user/centerinfo';
+        });
+
+        $('#error, #domDialog').on('dialog:confirm', function () {
+            setTimeout(function () {
+                $('#submitCase').removeClass('disabled');
+            }, 500);
+        });
+
+
+        // 选择地区
+        $("#area").bind('click' ,function () {
+            $("#position").suspend({
+                bodyNoScroll: false
+            }).suspend("show");
+            $('.blend-tab').tab();
+        });
+
+        var areas = [];
+
+        $('#province').delegate('[data-area]', 'tap', function (event) {
+            var area = $(this).attr('data-area');
+            var province = $(this).text();
+            areas = [];
+            areas.push(province);
+            getSubCity(area, true, function(){
+                $('.blend-tab').tab('active', 1);
+            });
+        });
+
+        $('#city').delegate('[data-area]', 'tap', function (event) {
+            var city = $(this).text();
+            areas.push(city);
+            $('#area_text').text(areas.join('/'));
+            $('[name="area"]').val(areas.join('/'));
+            $("#position").suspend({}).suspend("hide");
+            $('.blend-tab').tab();
+        });
+
+        function getSubCity(area, sub, callback) {
+            var lbsURL = '/proxy/baidumap/?qt=sub_area_list&level=1&callback=?';
+            $.getJSON(lbsURL, {areacode: area}, function (data) {
+                buildNode(data, sub);
+                if (typeof callback == 'function') {
+                    callback();
+                }
+            });
+        }
+
+        getSubCity(1);
+
+        var hotCity = ['北京市', '上海市', '广东省', '重庆市', '天津市'];
+
+        var sortCity = function (sub) {
+            var temp = [];
+            var hot = [];
+            for(var i in sub) {
+                if (hotCity.indexOf(sub[i].area_name) == -1) {
+                    temp.push({
+                        area_code: sub[i].area_code,
+                        area_name: sub[i].area_name
+                    });
+                }
+                else {
+                    hot.push({
+                        area_code: sub[i].area_code,
+                        area_name: sub[i].area_name
+                    });
+                }
+            }
+            var sHot = [];
+            var index;
+            for(var i = 0; i < hot.length; i++) {
+                index = hotCity.indexOf(hot[i].area_name);
+                sHot[index] = hot[i];
+            }
+            return Array.prototype.concat(sHot, temp);
+        }
+
+        function buildNode(data, subType) {
+            var tpls = [];
+            var sub = data.content.sub;
+            if (!subType) {
+                sub = sortCity(sub);
+            }
+            for(var i in sub) {
+                tpls.push('<div class="law-card" data-area='+sub[i].area_code+'><span>'+sub[i].area_name+'</span></div>');
+            }
+            if (!subType) {
+                $('#province').html(tpls.join(''));
+            }
+            else {
+                $('#city').html(tpls.join(''));
+            }
+        }
+    });
+    </script>
+</body>
+</html>

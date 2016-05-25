@@ -1,0 +1,76 @@
+<link rel="stylesheet" href="mathquill.css">
+<script src="jquery.min.js"></script>
+<script src="mathquill.js"></script>
+
+<style>
+    /*#answer {*/
+        /*color: white;*/
+        /*border-color: white;*/
+        /*background: black;*/
+    /*}*/
+    /*#answer .mq-matrixed {*/
+        /*background: black;*/
+    /*}*/
+    /*#answer .mq-matrixed-container {*/
+        /*filter: progid:DXImageTransform.Microsoft.Chroma(color='black');*/
+    /*}*/
+</style>
+
+<p>
+    Solve <span id="problem">ax^2 + bx + c = 0</span>:
+    <span id="answer">x\Rightarrow\frac{x^2}{2}</span>
+</p>
+
+<script>
+    var MQ = MathQuill.getInterface(2);
+    MQ.StaticMath($('#problem')[0]);
+    var answer = MQ.MathField($('#answer')[0], {
+        substituteTextarea: function() {
+            return document.createElement('textarea');
+        },
+        handlers: {
+            edit: function() {
+                console.log(answer.latex());
+            },
+            upOutOf: function(mathField) {  },
+            moveOutOf: function(dir, mathField) {
+//                if (dir === MQ.L) ... else ...
+            }
+        }
+    });
+MQ.config({
+    spaceBehavesLikeTab: true,
+    leftRightIntoCmdGoes: 'up',
+    restrictMismatchedBrackets: true,
+    sumStartsWithNEquals: true,
+    supSubsRequireOperand: true,
+    charsThatBreakOutOfSupSub: '+-=<>',
+    autoSubscriptNumerals: true,
+    autoCommands: 'pi theta sqrt sum',
+    autoOperatorNames: 'sin cos etc'
+});
+
+    var mathFieldSpan = $('<span>\\sqrt{}</span>');
+    var mathField = MQ.MathField(mathFieldSpan[0]);
+    mathFieldSpan.appendTo(document.body);
+    mathField.reflow();
+
+//    console.log(answer.latex('a_n x^n'));
+    console.log(answer.latex());
+    answer.focus();
+    answer.write('\\int_{}^{}{}d{}');
+    answer.keystroke('Enter');
+//    answer.cmd('\\sqrt');   //输入LaTeX命令
+//    answer.moveToDirEnd(MQ.R);
+//    answer.moveToDirEnd(MQ.L);  //移动光标
+//    answer.keystroke('Del');   //模拟键盘操作
+//    answer.typedText('Del');  //模拟输入
+
+    var options={
+        htmlString: '<span class="custom-embed"></span>',
+        text: function() { return 'custom_embed'; },
+        latex: function() { return '\customEmbed'; }
+    };
+    answer.moveToDirEnd(MQ.R);  //移动光标
+//    answer.dropEmbedded(0,0,options);
+</script>

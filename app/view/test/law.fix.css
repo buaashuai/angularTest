@@ -1,0 +1,1077 @@
+html,
+body {
+    background: #f8f8f8;
+}
+
+[data-href] {
+    cursor: pointer;
+}
+
+/*样式修正*/
+
+.blend-fix .blend-card {
+    margin-bottom: 10px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+                -ms-grid-row-align: center;
+            align-items: center;
+}
+
+.blend-header {
+    background-color: #4578e0 !important;
+}
+
+.blend-tab-header {
+   border-bottom: solid 1px #dcdcdc;
+}
+
+.blend-suspend-mask {
+    pointer-events: auto;
+    opacity: .2 !important;
+}
+
+.blend-slider-control-nav {
+    text-align: center !important;
+}
+
+.blend-tab-header-active {
+    background-color: #4174e3 !important;
+}
+
+.blend-tab-header-item-active {
+    color: #4174e3;
+}
+
+/*个人中心button*/
+.law-profile-btn {
+    display: inline-block;
+    position: absolute;
+    color: #fff;
+    right: 10px;
+    top: 10px;
+    background: rgba(0, 0, 0, .23);
+    padding: 5px;
+    border-radius: 3px;
+    z-index: 1000;
+    text-decoration: none;
+}
+
+.law-profile-btn:hover,
+.law-profile-btn:focus {
+    text-decoration: none;
+    color: #fff;
+}
+
+ /*card*/
+.law-card {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    border-bottom: solid 1px #ededed;
+    background-color: #fff;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.law-card-arrow:after {
+    position: absolute;
+    font-family: "boostfont";
+    content: "\e604";
+    display: block;
+    width: 20px;
+    height: 22px;
+    right: 10px;
+    top: 50%;
+    margin-top: -11px;
+    font-size: 18px;
+    color: #c0c0c0;
+}
+
+.law-card-fix {
+    padding: 0;
+    margin-top: 10px;
+    pointer-events: auto;
+}
+
+.law-figure-fix {
+    margin-top: -10px;
+}
+
+.law-card-content-view {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: relative;
+    padding-right: 20px;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+}
+
+.law-card-content-view:after {
+    display: block;
+    content: " ";
+    width: 1px;
+    background: #ededed;
+    height: 100%;
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+
+.law-card-status {
+    min-width: 60px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.law-card-group {
+    margin-bottom: 10px;
+}
+
+.law-card-group .law-card {
+    margin-bottom: 0;
+}
+
+/*左固定，右弹性card样式*/
+.law-card-label {
+    width: 60px;
+    min-width: 60px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-weight: 500;
+    color: #777;
+}
+
+.law-card-profile {
+    width: 80px;
+    min-width: 80px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    font-weight: 500;
+    color: #777;
+}
+
+.law-card-content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    position: relative;
+    padding: 0 10px;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.law-card-item {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+}
+
+/*button*/
+
+.law-btn {
+    padding: 10px 0;
+    color: #fff;
+    display: block;
+    text-align: center;
+    margin: 0 5px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.law-btn-index {
+    padding: 14px 0;
+    color: #fff;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.law-btn:hover,
+.law-btn:focus {
+    text-decoration: none;
+}
+
+.law-btn-phone {
+    background-color: #4578e0;
+}
+
+.law-btn-delegate {
+    background-color: #ff9901;
+}
+
+.law-nav-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.law-nav-bottom .law-btn-phone {
+    color: #ff9901;
+    background-color: #fff;
+}
+
+.law-nav-bottom .law-btn {
+    border-radius: 0;
+    margin: 0;
+}
+
+
+/*标签*/
+.law-badge {
+    display: inline-block;
+    *display: block;
+    *display: inline;
+    border: 1px solid #ff8f00;
+    color: #ff8f00;
+    padding: 0 2px;
+    font-size: 10px;
+    margin-right: 2px;
+}
+
+/*激活状态和关闭状态*/
+
+.law-status-active {
+    color: #ff8f00;
+}
+
+.law-status-disabled {
+    color: #d6d6d6;
+}
+
+/*咨询进度*/
+.law-progress-wrap {
+
+}
+.law-progress {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    color: #ccc;
+    position: relative;
+}
+
+.law-progress::before {
+    content: " ";
+    display: block;
+    width: 100%;
+    position: absolute;
+    background-color: #ededed;
+    background-image: url(/static/images/slash.png);
+    background-repeat: repeat-x;
+    height: 1px;
+    top: 40%;
+    left: 0;
+    border-left: 30px #fff solid;
+    border-right: 30px #fff solid;
+    margin-top: -3px;
+}
+
+.law-progress-step {
+    text-align: center;
+    position: relative;
+    max-width: 80px;
+    -webkit-flex-flow: column nowrap;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+                -ms-grid-row-align: center;
+            align-items: center;
+}
+
+.law-progress-title {
+    margin-top: 5px;
+}
+
+.law-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    z-index: 1000;
+}
+
+/*form*/
+.law-form,
+.law-form-inline {
+    padding: 10px;
+}
+
+.law-form .law-form-group {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    width: 100%;
+}
+
+.law-form-label {
+    width: 80px;
+}
+
+.law-form-input,
+.law-form-select {
+    height: 30px;
+    font-size: 14px;
+    line-height: 15px;
+    border: none;
+    -webkit-appearance: none;
+    display: block;
+    width: 100%;
+    color: #777;
+}
+
+/*各种标题*/
+.law-title {
+    color: #262626;
+    font-size: 16px;
+    word-break: break-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.law-subtitle,
+.law-date {
+    color: #777;
+    margin-top: 5px;
+}
+
+.law-person {
+    width: 50%;
+
+}
+
+/*首页样式*/
+.law-icon {
+    display: inline-block;
+    text-indent: 9999px;
+    background-size: cover;
+}
+.law-icon-user {
+    width: 15px;
+    height: 14px;
+    background-image: url(/static/images/icon_user.png);
+    vertical-align: text-bottom;
+}
+.law-icon-envelope {
+    width: 40px;
+    height: 38.5px;
+    background-image: url(/static/images/icon_mail.png);
+}
+
+.law-icon-phone {
+    width: 40px;
+    height: 38.5px;
+    background-image: url(/static/images/icon_phone.png);
+}
+
+.law-icon-lawyer {
+    width: 87px;
+    height: 73.5px;
+    background-image: url(/static/images/lawyer.png);
+}
+
+.law-flex-row,
+.law-flex-col {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    width: 100%;
+}
+
+.law-flex-row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+}
+
+.law-flex-col {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+                -ms-grid-row-align: center;
+            align-items: center;
+}
+
+.law-left {
+    border-right: 1px solid #e8e8e8;
+    padding: 10px;
+}
+
+.law-left-lawyer {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.law-right-sub {
+    padding: 10px;
+}
+
+.law-right-sup {
+    padding: 10px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+/*提交需求页面*/
+.law-round {
+    width: 100%;
+    padding-top: 100%;
+    border-radius: 50%;
+    background: #ccc;
+    position: relative;
+}
+
+.law-progress-active .law-round {
+    background: #53a3ff;
+}
+
+.law-progress-active .law-progress-title{
+    color: #53a3ff;
+}
+
+.law-round-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}
+
+.law-icon-doc {
+    width: 16.5px;
+    height: 21.5px;
+    background-image: url(../images/icon_doc.png);
+}
+
+.law-icon-box {
+    width: 22.5px;
+    height: 20px;
+    background-image: url(../images/icon_box.png);
+}
+
+.law-icon-check {
+    width: 19.5px;
+    height: 24px;
+    background-image: url(../images/icon_check.png);
+}
+
+.law-icon-hand {
+    width: 27px;
+    height: 22px;
+    background-image: url(../images/icon_hand.png);
+}
+
+.law-hidden {
+    display: none !important;
+}
+
+#topnav ul {
+    z-index: 1000;
+    position: absolute;
+    left: 0;
+    padding: 10px 0;
+    text-align: left;
+    left: 0;
+    pointer-events: auto;
+}
+
+#badge {
+    padding: 0;
+    margin: 5px;
+    text-align: center;
+}
+
+#badge li {
+    display: inline-block;
+    margin: 3px;
+    background-color: #f2f2f2;
+    padding: 5px;
+}
+
+#badge li.active {
+    background-color: #3385ff;
+}
+
+#badge .active span {
+    color: #fff !important;
+}
+
+#badge li span {
+    border: none;
+    text-decoration: none;
+    color: #999999;
+}
+
+.blend-topnav-item {
+    position: static !important;
+}
+
+.blend-topnav-wrapper {
+    position: relative;
+}
+
+.law-btn-sure {
+    margin-top: 5px;
+    border-top: 1px solid #E8E2E2;
+    text-align: center;
+}
+
+.law-btn-sure .btn-badge {
+    display: block;
+    line-height: 40px;
+    text-decoration: none;
+    color: #262626;
+}
+
+.law-filter-show {
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    top: 44px;
+    background-color: #fff;
+}
+
+.header-show {
+    position: absolute;
+    z-index: 101;
+}
+
+.law-tab-content {
+    position: absolute;
+    z-index: 2000;
+    width: 100%;
+    background-color: #fff;
+    display: none;
+    overflow: hidden;
+}
+
+.law-full {
+    height: 100%;
+    overflow: hidden;
+}
+
+.law-scroll {
+    height: 246px !important;
+    overflow: scroll;
+}
+
+.law-city-pannel .law-card {
+    background-color: #fafafa;
+}
+
+.law-province-pannel {
+    border-right: 1px solid #fafafa;
+}
+
+.law-province-active {
+    background-color: #fafafa;
+}
+
+.law-card,
+.law-card * {
+    text-overflow: ellipsis;
+}
+
+.law-image-round {
+    border-radius: 50% !important;
+}
+
+.law-case-filter {
+    margin-bottom: 10px;
+}
+
+.law-case-header {
+    display: -webkit-box;
+    background: #fff;
+    display: -webkit-box;
+    -webkit-box-pack: justify;
+    padding: 10px;
+    position: relative;
+    font-size: 16px;
+    border-bottom: 1px solid #E4E5EA;
+}
+
+.law-case-header::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    right: 80px;
+    background-color: #E4E5EA;
+}
+
+.law-case-body {
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    background: #fff;
+    display: none;
+}
+
+.law-case {
+    display: block;
+    position: relative;
+    padding-right: 20px;
+}
+
+.law-case::after {
+    position: absolute;
+    font-family: "boostfont";
+    content: "\e604";
+    display: block;
+    width: 20px;
+    height: 22px;
+    right: 0;
+    top: 50%;
+    margin-top: -11px;
+    font-size: 18px;
+    color: #c5c5c5;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+}
+
+.law-case-footer {
+    background-color: #fafbfc;
+}
+
+.law-history-header {
+    background-color: #f5f6f7;
+}
+
+.law-history-body {
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-align: start;
+    -webkit-box-pack: justify;
+    padding: 10px 0;
+}
+
+.law-history-body div{
+    -webkit-box-flex: 1;
+    text-align: left;
+}
+
+
+.law-icon-fen::before {
+    content: "分";
+    font-style: normal;
+    background-color: #DED7D7;
+    padding: 4px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.law-case-fen {
+    color: #FF8F2F;
+    font-size: 18px;
+    padding-left: 5px;
+}
+
+.law-score {
+    -webkit-box-align: center;
+    box-align: center;
+    margin: 5px;
+    background: #fff;
+    padding: 20px 0;
+}
+
+.law-score-header {
+    margin: 10px;
+    font-size: 16px;
+    color: #777;
+}
+
+.law-score-money {
+    color: #ff9901;
+    font-size: 16px;
+}
+
+.law-score-num {
+    color: #777;
+}
+
+.disabled {
+    pointer-events: none;
+}
+
+.law-card-label-align {
+    -webkit-box-pack: center !important;
+    -webkit-justify-content: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+}
+
+.law-phone-error {
+    color: #f44;
+    outline: 1px solid #f44;
+}
+
+.law-suspend-title {
+    width: 100%;
+    text-align: center;
+}
+
+.law-btn-call {
+    background-color: #ee992b;
+    margin-right: 5px;
+    padding-top: 10px;
+}
+
+.law-btn-appointment {
+    background-color: #3869ce;
+    padding-top: 10px;
+}
+
+.icon-phone {
+    display: inline-block;
+    height: 21.5px;
+    width: 20px;
+    background: url(/static/images/icon-phone.png) no-repeat;
+    background-size: 100%;
+    vertical-align: bottom;
+}
+
+.icon-note {
+    height: 21.5px;
+    width: 20px;
+    background: url(/static/images/icon-note.png) no-repeat;
+    display: inline-block;
+    background-size: 100%;
+    vertical-align: bottom;
+}
+
+.law-card-index {
+    border-bottom: 1px dashed #ececec;
+    text-align: center;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.law-service-time {
+    text-align: center;
+}
+
+.law-group-index {
+    background-color: #fff;
+    margin-top: 10px;
+}
+
+.law-index-img {
+
+}
+
+.law-index-desc {
+    text-align: left;
+}
+
+.law-text1 {
+    color: #f44;
+}
+.law-text2 {
+    color: #ff9f07;
+}
+.law-text3 {
+    color: #44aeff;
+}
+.law-text4 {
+    color: #e58f00;
+}
+
+.law-text0 {
+    color: #4578e0;
+}
+
+h2 {
+    margin: 0;
+}
+
+.law-check {
+    position: relative;
+}
+
+.law-check::after {
+    content: "";
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background-image: url(/static/images/check.png);
+    background-size: 100%;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+}
+
+.law-specialty {
+    position: relative;
+}
+
+.law-badge-title {
+    color: #777;
+    position: absolute;
+}
+
+.law-badge-group {
+    margin-left: 49px;
+}
+
+/*process*/
+.icon-circle {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-size: 100%;
+}
+
+.icon-note-circle {
+    background-image: url(/static/images/icon-note-circle.png);
+}
+
+.icon-bag-circle {
+    background-image: url(/static/images/icon-bag-circle.png);
+}
+
+.icon-hand-circle {
+    background-image: url(/static/images/icon-hand-circle.png);
+}
+
+.icon-check-circle {
+    background-image: url(/static/images/icon-check-circle.png);
+}
+
+#logo:hover {
+    text-underline: none;
+}
+#logo:visited {
+    text-underline: none;
+}
+.img_bottom {
+    position: absolute;
+    bottom: 50px;
+    left: 34%;
+    text-align: center;
+}
+.home_img {
+    width: 11%;
+    margin-right: 5px;
+}
+.img_bottom span {
+    font-size: 14px;
+}
+.img_href {
+    width: 9%;
+    margin-left: 10px;
+}
+.index_logo {
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+}
+.home_href {
+    width: 5%;
+    margin-right: 5px;
+    margin-bottom: 2px;
+}
+.law-nav-button {
+    height: 120px;
+    text-align: center;
+}
+.img-bg {
+    height: 40px;
+    width: 40px;
+}
+.law-card-span {
+    text-align: center;
+    display: block;
+    color: #fff;
+    padding: 5px;
+}
+.law-card-text {
+    text-align: center;
+    font-size: 12px;
+    color: #f1d1a7;
+    display: inline-block;
+}
+.index-content {
+    padding: 5px;
+}
+.law-img {
+    text-align: center;
+}
+.submit-text {
+    color: #88a5e2;
+}
+.call-text {
+    color: #fae1c0;
+}
+.law-ads {
+    border-left: 5px solid #2f65d3;
+    padding-left: 5px;
+    font-weight: bold;
+}
+.law-ad-content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    color: #ccc;
+    position: relative;
+    -webkit-justify-content: space-between;
+           -webkit-box-pack: justify;
+           background-color: #fff;
+            justify-content: space-between;
+              -ms-flex-pack: justify;
+
+}
+.law-ad-item {
+    text-align: center;
+    position: relative;
+    max-width: 80px;
+    align-items: center;
+    -webkit-align-items: center;
+     -ms-grid-row-align: center;
+      -webkit-flex-flow: column nowrap;
+      -webkit-box-align: center;
+         -ms-flex-align: center;
+          -ms-flex-flow: column nowrap;
+              flex-flow: column nowrap;
+}
+.law-index-item {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex: 1;
+}
+.icon-ad-power {
+    background-image: url(/static/images/power.png);
+}
+.icon-ad-free {
+    background-image: url(/static/images/free.png);
+}
+.icon-ad-count {
+    background-image: url(/static/images/icon-count.png);
+}
+.icon-ad-fast {
+    background-image: url(/static/images/icon-ad4.png);
+}
+.mt10 {
+    margin-top: 10px ;
+    padding-top: 5px;
+    padding-left: 5px;
+    background: #fff;
+}
+.law-ad-title {
+    margin-top: 5px;
+    display: block;
+    color: #666;
+}
+.law-index-text {
+    text-align: center;
+    font-size: 12px;
+    padding: 0 23px;
+    display: inline-block;
+}
+.index-button {
+    font-size: 16px;
+    margin: 0 auto;
+    width: 45%;
+    background: #4271d0;
+}
+.ad-word {
+    display: block;
+}
